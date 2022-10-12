@@ -12,14 +12,21 @@ function checkBirthDateIsLucky(){
 }
 
 function compareValues(sum,luckyNumber){
-    if(sum % luckyNumber === 0){
-        outputBox.innerHTML=`Your Birthday Is <span class="text">Lucky</span><span class="emoji">😉</span>`;
-        // alert('yes')
+    if(luckyNumber > 0) {
 
 
-    }else{
-        outputBox.innerHTML=`Your Birthday Is <span class="text">Not Lucky</span><span class="emoji">😔</span>`;
-        // alert('no')
+        if(sum % luckyNumber === 0){
+            outputBox.innerHTML=`Your Birthday Is <span class="text">Lucky</span><span class="emoji">😉</span>`;
+            // alert('yes')
+    
+    
+        }else{
+            outputBox.innerHTML=`Your Birthday Is <span class="text">Not Lucky</span><span class="emoji">😔</span>`;
+            // alert('no')
+        }
+
+    } else {
+        outputBox.innerText = 'Lucky number cannot be a Negative value or Zero. ⚠️'
     }
 
 }
